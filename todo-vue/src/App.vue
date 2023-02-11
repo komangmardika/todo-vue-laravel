@@ -28,8 +28,8 @@
               <div class="mt-1 ml-2 text-black">{{todo.title}}</div>
               <div class="btn-group" role="group" aria-label="Basic example">
                 <button type="button" class="btn btn-outline-dark" @click="viewTodo(todo)">VIEW</button>
-                <button v-if="!todo.is_done" type="button" class="btn btn-outline-dark" @click="doneTodo(todo)">DONE</button>
-                <button type="button" class="btn btn-outline-dark" @click="deleteTodo(todo)">DELETE</button>
+                <button v-if="!todo.is_done" type="button" class="btn btn-outline-dark" @click="doneTodo(todo.id)">DONE</button>
+                <button type="button" class="btn btn-outline-dark" @click="deleteTodo(todo.id)">DELETE</button>
               </div>
             </li>
 
