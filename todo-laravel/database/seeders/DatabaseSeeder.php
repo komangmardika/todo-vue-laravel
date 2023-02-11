@@ -1,0 +1,25 @@
+<?php
+
+namespace Database\Seeders;
+
+use App\Models\User;
+use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\Hash;
+
+class DatabaseSeeder extends Seeder
+{
+    /**
+     * Seed the application's database.
+     *
+     * @return void
+     */
+    public function run()
+    {
+        // \App\Models\User::factory(10)->create();
+        User::insert([
+          ['name' => 'Yudi', 'email' => 'yudi@canchill.dev', 'password' => Hash::make('password')],
+          ['name' => 'Ary', 'email' => 'ary@canchill.dev', 'password' => Hash::make('password')],
+          ['name' => 'Krisna', 'email' => 'krisna@canchill.dev', 'password' => Hash::make('password')],
+        ]);
+    }
+}
